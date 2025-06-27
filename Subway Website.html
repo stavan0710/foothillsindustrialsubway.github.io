@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subway - Foothills Industrial Park, Calgary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4nquQ7mRYhBP6McIH_pwG6102KSYDJPZ-qTSvsAIv5NWraPZiGcGO_E75M5rHVPQfSXOlukQj92ZrpdIZWNnC8xbMKa0ZQMSFZ4Kkdde_egFqpLfow4XbaQv19A8vHnrq0fcVYAqwQ=s680-w680-h510-rw');
+            background-size: cover;
+            background-position: center;
+        }
+        .menu-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Style for the modal result content */
+        #modalResult h4 {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.5rem; /* mb-2 */
+            color: #166534; /* text-green-800 */
+        }
+        #modalResult ul {
+            list-style-type: disc;
+            padding-left: 1.5rem; /* pl-6 */
+            margin-top: 0.5rem;
+        }
+         #modalResult li {
+            margin-bottom: 0.25rem; /* mb-1 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+             <!-- Logo -->
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Subway_2016_logo.svg/1200px-Subway_2016_logo.svg.png" alt="Subway Foothills Industrial Park Logo" class="h-16 w-auto">
+            </div>
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#menu" class="text-gray-600 hover:text-green-600">Menu</a>
+                <a href="#catering" class="text-gray-600 hover:text-green-600">Catering</a>
+                <a href="#location" class="text-gray-600 hover:text-green-600">Location</a>
+                <a href="#hours" class="text-gray-600 hover:text-green-600">Hours</a>
+                <a href="#contact" class="text-gray-600 hover:text-green-600">Contact</a>
+            </div>
+            <!-- Order Button -->
+            <a href="https://www.subway.com/en-ca/restaurant/20096-0/menu" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition duration-300">Order Online</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white">
+        <div class="container mx-auto px-6 py-24 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Subway Foothills Industrial Park!</h1>
+            <p class="text-lg md:text-xl mb-8">Your destination for fresh, delicious, made-to-order sandwiches.</p>
+            <a href="#menu" class="bg-yellow-500 text-gray-900 font-bold px-8 py-3 rounded-full hover:bg-yellow-400 transition duration-300">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-12">
+        
+        <!-- Menu Section -->
+        <section id="menu" class="my-12">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Popular Menu Items</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">This is a selection of our customer favorites. Visit us in-store for the full menu of sandwiches, salads, bowls, and sides!</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.subway.com/ns/images/menu/can/eng/cnsteakcheese_footlong_herolarge_desktop.png" class="w-full h-48 object-cover" alt="Steak and Cheese Sub" onerror="this.onerror=null;this.src='https://placehold.co/400x250/00965E/FFFFFF?text=Steak+%26+Cheese';">
+                    <div class="p-6"><h3 class="text-xl font-semibold mb-2">Steak & Cheese</h3><p class="text-gray-600">Hot, tender, shaved steak made with Canadian Beef, served on the bread of your choice. It's just bursting with flavour! Toast your bread to add even more great taste!</p></div>
+                </div>
+                <div class="menu-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.subway.com/ns/images/menu/can/eng/1004_soct_footlong_desktop.png" class="w-full h-48 object-cover" alt="Sweet Onion Chicken Teriyaki" onerror="this.onerror=null;this.src='https://placehold.co/400x250/FAA61A/FFFFFF?text=Sweet+Onion+Chicken+Teriyaki';">
+                    <div class="p-6"><h3 class="text-xl font-semibold mb-2">Sweet Onion Chicken Teriyaki</h3><p class="text-gray-600">Our Sweet Onion Chicken Teriyaki is stuffed with teriyaki-glazed Canadian farm-raised chicken strips and fresh veggies, topped with our Sweet Onion Teriyaki sauce.</p></div>
+                </div>
+                <div class="menu-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.subway.com/ns/images/menu/can/eng/f_beauty_italianbmt_footlong_white_sandwich_desktop.png" class="w-full h-48 object-cover" alt="Italian B.M.T." onerror="this.onerror=null;this.src='https://placehold.co/400x250/ED1C24/FFFFFF?text=Italian+B.M.T.';">
+                    <div class="p-6"><h3 class="text-xl font-semibold mb-2">Italian B.M.T.®</h3><p class="text-gray-600">This all-time Italian classic is packed with Genoa salami, spicy pepperoni, and deli-style Black Forest ham made with pork raised on Canadian farms. Get it topped with your favourite veggies freshly sliced in restaurant on your choice of freshly baked bread.</p></div>
+                </div>
+                <div class="menu-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.subway.com/ns/images/menu/can/eng/1016_veggiedelite_footlong_desktop.png" class="w-full h-48 object-cover" alt="Veggie Delite" onerror="this.onerror=null;this.src='https://placehold.co/400x250/00A44F/FFFFFF?text=Veggie+Delite';">
+                    <div class="p-6"><h3 class="text-xl font-semibold mb-2">Veggie Delite®</h3><p class="text-gray-600">Crispy, crunchy and classically delicious. The Veggie Delite® is proof that a veggie sandwich can be high in flavour. Try a delicious combination of lettuce, tomatoes, green peppers, cucumbers and onions.</p></div>
+                </div>
+                <div class="menu-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.subway.com/ns/images/menu/can/eng/f_beauty_turkeybreast_footlong_white_sandwich_desktop.png" class="w-full h-48 object-cover" alt="Turkey Breast" >
+                    <div class="p-6"><h3 class="text-xl font-semibold mb-2">Turkey Breast</h3><p class="text-gray-600">Simple, yet always bursting with flavour. Dive into our deli-style turkey breast sandwich made with turkey raised on Canadian farms and topped with your favourite veggies freshly sliced in restaurant!</p></div>
+                </div>
+                <div class="menu-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.subway.com/ns/images/menu/can/eng/1008_meatballmarinara_footlong_desktop.png" class="w-full h-48 object-cover" alt="Rotisserie-Style Chicken">
+                    <div class="p-6"><h3 class="text-xl font-semibold mb-2">Rotisserie-Style Chicken</h3><p class="text-gray-600">Try our juicy, Rotisserie-style Chicken, made with Canadian farm-raised chicken and topped with lettuce, spinach, tomatoes, cucumber, green peppers, and red onions. Your tastebuds will thank you later!</p></div>
+                </div>
+                <div class="menu-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.subway.com/ns/images/menu/can/eng/f_beauty_blackforestham_footlong_white_sandwich_desktop.png" class="w-full h-48 object-cover" alt="Black Forest Ham">
+                    <div class="p-6"><h3 class="text-xl font-semibold mb-2">Black Forest Ham</h3><p class="text-gray-600">A classic that never goes out of style. Made with pork raised on Canadian farms, our deli-style Black Forest ham has never been better. Load it up with all your favourite veggies freshly sliced in restaurant, on your choice of freshly baked bread. Yum!</p></div>
+                </div>
+                 <div class="menu-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.subway.com/ns/images/menu/can/eng/cncoldcutcombo_footlong_herolarge_desktop.png" class="w-full h-48 object-cover" alt="Cold Cut Combo">
+                    <div class="p-6"><h3 class="text-xl font-semibold mb-2">Cold Cut Combo</h3><p class="text-gray-600">Are you a meat-lover? Then you'll love our Cold Cut Combo! One bite into these delicious deli meats made with Canadian farm raised Chicken and Pork, topped with crisp vegetables and served on your choice of bread and you'll be addicted.</p></div>
+                </div>
+                 <div class="menu-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.subway.com/ns/images/menu/can/eng/1014_tuna_footlong_desktop.png" class="w-full h-48 object-cover" alt="Tuna">
+                    <div class="p-6"><h3 class="text-xl font-semibold mb-2">Tuna</h3><p class="text-gray-600">You’ll love every bite of our classic tuna sandwich. 100% wild caught tuna blended with creamy mayonnaise then topped with your choice of crisp, fresh veggies. 100% delicious.</p></div>
+                </div>
+                 <div class="menu-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.subway.com/ns/images/menu/can/eng/1136_pizzasubmelt_footlong_desktop.png" class="w-full h-48 object-cover" alt="Pizza Sub Melt">
+                    <div class="p-6"><h3 class="text-xl font-semibold mb-2">Pizza Sub Melt</h3><p class="text-gray-600">The Italian sandwich par excellence. Topped with marinara sauce, cheese and pepperoni. Try it toasted for even more pizza taste!</p></div>
+                </div>
+                 <div class="menu-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.subway.com/ns/images/menu/can/eng/f_beauty_veggiepatty_footlong_white_sandwich_desktop.png" class="w-full h-48 object-cover" alt="Veggie Patty">
+                    <div class="p-6"><h3 class="text-xl font-semibold mb-2">Veggie Patty</h3><p class="text-gray-600">Our veggie patty is vegan and free of artificial colours and flavours. Topped with lettuce, spinach, onions, peppers, tomatoes, cucumbers and your favourite sauce!</p></div>
+                </div>
+                 <div class="menu-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.subway.com/ns/images/menu/can/eng/1008_meatballmarinara_footlong_desktop.png" class="w-full h-48 object-cover" alt="Meatball Marinara">
+                    <div class="p-6"><h3 class="text-xl font-semibold mb-2">Meatball Marinara</h3><p class="text-gray-600">Zesty meatballs covered with marinara sauce, and served on your choice of bread. Every bite is simply sensational! Get it toasted for even more great taste.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Catering Planner Section -->
+        <section id="catering" class="my-12 bg-white p-8 rounded-lg shadow-lg scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-4">AI Catering Planner</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Planning an event? Let our AI assistant help you build the perfect catering order for your group.</p>
+            
+            <div class="max-w-xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="numPeople" class="block text-sm font-medium text-gray-700 mb-1">Number of People</label>
+                        <input type="number" id="numPeople" name="numPeople" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500" placeholder="e.g., 15" min="1">
+                    </div>
+                     <div>
+                        <label for="occasion" class="block text-sm font-medium text-gray-700 mb-1">Occasion (Optional)</label>
+                        <input type="text" id="occasion" name="occasion" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500" placeholder="e.g., Team Lunch">
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label for="dietaryNeeds" class="block text-sm font-medium text-gray-700 mb-1">Dietary Needs or Preferences</label>
+                    <textarea id="dietaryNeeds" name="dietaryNeeds" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500" placeholder="e.g., 2 vegetarians, no spicy food, 1 gluten-free"></textarea>
+                </div>
+                 <div id="formError" class="text-red-500 text-center mb-4 font-medium"></div>
+                <div class="text-center">
+                    <button id="generatePlanBtn" class="bg-yellow-500 text-gray-900 font-bold px-8 py-3 rounded-full hover:bg-yellow-400 transition duration-300 flex items-center justify-center mx-auto disabled:bg-gray-400 disabled:cursor-not-allowed">
+                        <span class="mr-2 text-xl">✨</span>
+                        Generate Catering Plan
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Map Section -->
+        <section id="location" class="my-12 bg-white p-8 rounded-lg shadow-lg scroll-mt-20">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Find Us</h2>
+                    <p class="text-lg text-gray-700 mb-2">We're conveniently located in the Foothills Industrial Park.</p>
+                    <address class="not-italic text-gray-600">3619 61st Ave SE<br>Calgary, Alberta T2C 4T8<br>Canada</address>
+                     <div class="mt-4">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=3619+61st+Ave+SE,+Calgary,+AB+T2C+4T8" target="_blank" class="inline-block bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300">Get Directions</a>
+                    </div>
+                </div>
+                <div>
+                     <!-- Google Maps Embed -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2510.9608242538993!2d-113.98373292341033!3d50.99839607170198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4171855cfb7fc37b%3A0x8028c50632852dbd!2sSubway!5e0!3m2!1sen!2sca!4v1750827808205!5m2!1sen!2sca" class="w-full h-[400px] border-0 rounded-lg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hours & Contact Section -->
+        <div class="grid md:grid-cols-2 gap-8 my-12">
+            <section id="hours" class="bg-white p-8 rounded-lg shadow-lg scroll-mt-20">
+                <h2 class="text-3xl font-bold mb-6 text-center">Store Hours</h2>
+                <div class="space-y-3 text-gray-700 text-lg">
+                    <div class="flex justify-between"><span>Monday</span> <span>7:00 AM – 7:00 PM</span></div>
+                    <div class="flex justify-between"><span>Tuesday</span> <span>7:00 AM – 7:00 PM</span></div>
+                    <div class="flex justify-between"><span>Wednesday</span> <span>7:00 AM – 7:00 PM</span></div>
+                    <div class="flex justify-between"><span>Thursday</span> <span>7:00 AM – 7:00 PM</span></div>
+                    <div class="flex justify-between"><span>Friday</span> <span>7:00 AM – 7:00 PM</span></div>
+                    <div class="flex justify-between"><span>Saturday</span> <span>10:00 AM – 3:00 PM</span></div>
+                    <div class="flex justify-between"><span>Sunday</span> <span>11:00 AM – 3:00 PM</span></div>
+                </div>
+            </section>
+            <section id="contact" class="bg-white p-8 rounded-lg shadow-lg scroll-mt-20">
+                <h2 class="text-3xl font-bold mb-6 text-center">Contact Us</h2>
+                <div class="text-center space-y-4">
+                    <p class="text-lg text-gray-700">Have a question or need to place a large order? Give us a call!</p>
+                    <p class="text-2xl font-semibold text-green-600"><a href="tel:(403) 720-6022" class="hover:underline">(403) 720-6022</a></p>
+                    <p class="text-gray-600">We look forward to serving you!</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Subway IP LLC. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">This is a local and independently owned and operated franchise.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Catering Plan -->
+    <div id="cateringModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-2xl p-6 md:p-8 m-4 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-gray-800">Your Custom Catering Plan</h3>
+                <button id="closeModalBtn" class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            </div>
+            <div id="modalLoading" class="text-center py-8">
+                 <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+                 <p class="mt-4 text-gray-600">Generating your plan with Gemini...</p>
+            </div>
+            <div id="modalResult" class="text-gray-700 space-y-4 hidden">
+               <!-- Gemini response will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if(targetElement){
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // --- AI CATERING PLANNER LOGIC ---
+
+        const generatePlanBtn = document.getElementById('generatePlanBtn');
+        const cateringModal = document.getElementById('cateringModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const modalLoading = document.getElementById('modalLoading');
+        const modalResult = document.getElementById('modalResult');
+        const numPeopleInput = document.getElementById('numPeople');
+        const occasionInput = document.getElementById('occasion');
+        const dietaryNeedsInput = document.getElementById('dietaryNeeds');
+        const formError = document.getElementById('formError');
+
+        // Function to show/hide the modal
+        function toggleModal(show) {
+            cateringModal.classList.toggle('hidden', !show);
+        }
+
+        generatePlanBtn.addEventListener('click', async () => {
+            const numPeople = numPeopleInput.value;
+            const occasion = occasionInput.value;
+            const dietaryNeeds = dietaryNeedsInput.value;
+
+            // Simple validation
+            if (!numPeople || parseInt(numPeople, 10) <= 0) {
+                formError.textContent = "Please enter a valid number of people.";
+                return;
+            }
+            formError.textContent = ''; // Clear previous errors
+
+            // Show modal and loading state
+            toggleModal(true);
+            modalLoading.classList.remove('hidden');
+            modalResult.classList.add('hidden');
+            modalResult.innerHTML = '';
+            generatePlanBtn.disabled = true;
+
+            const prompt = `I need to create a Subway catering order for a restaurant located in Calgary, Alberta, Canada.
+    
+            Event Details:
+            - Number of people: ${numPeople}
+            - Occasion: ${occasion || 'A casual get-together'}
+            - Dietary Needs/Preferences: ${dietaryNeeds || 'None specified'}
+            
+            Please act as a helpful Subway catering assistant. Based on the details above, suggest a complete catering order.
+            
+            Your suggestion should include:
+            1.  **Sandwich Platters:** Recommend specific, real Subway sandwich platters (e.g., "Classic Combo Platter," "Flavor Craver Platter") and suggest how many platters are needed. A standard platter usually feeds 5-9 people. Mention the types of sandwiches on each platter.
+            2.  **Sides:** Suggest sides like cookie platters (mentioning the variety of cookies) or bags of chips.
+            3.  **Drinks:** Recommend a variety of bottled drinks available at Subway.
+            4.  A concluding sentence encouraging the user to call the store to confirm the order.
+            
+            Format the output in clean HTML using headings (<h4>), paragraphs (<p>), and unordered lists (<ul> with <li>). Do not include <html>, <head>, or <body> tags. Start with a friendly introduction. Make the suggestions sound appealing and helpful.`;
+
+            try {
+                // API key is handled by the execution environment
+                const apiKey = ""; 
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                
+                const payload = {
+                    contents: [{ role: "user", parts: [{ text: prompt }] }],
+                    generationConfig: { temperature: 0.7, topP: 1.0 }
+                };
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                
+                let text = '';
+                if (result.candidates && result.candidates.length > 0 && result.candidates[0].content && result.candidates[0].content.parts && result.candidates[0].content.parts.length > 0) {
+                    text = result.candidates[0].content.parts[0].text;
+                } else {
+                    if (result.promptFeedback && result.promptFeedback.blockReason) {
+                         text = `<p class="text-red-500">The request was blocked due to safety concerns (${result.promptFeedback.blockReason}). Please adjust your input and try again.</p>`;
+                    } else {
+                        throw new Error("Invalid response structure from API.");
+                    }
+                }
+                modalResult.innerHTML = text.replace(/\n/g, '<br>');
+
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                modalResult.innerHTML = '<p class="text-red-500">We\'re sorry, but we couldn\'t generate a plan at this moment. This could be due to a network issue or a problem with the AI service. Please try again later, or contact the store directly for catering options.</p>';
+            } finally {
+                // Hide loading and show result
+                modalLoading.classList.add('hidden');
+                modalResult.classList.remove('hidden');
+                generatePlanBtn.disabled = false;
+            }
+        });
+
+        // Close modal listeners
+        closeModalBtn.addEventListener('click', () => toggleModal(false));
+        cateringModal.addEventListener('click', (event) => {
+            if (event.target === cateringModal) {
+                toggleModal(false);
+            }
+        });
+    </script>
+
+</body>
+</html>
